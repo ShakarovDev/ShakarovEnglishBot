@@ -1,8 +1,14 @@
+import os
 import telebot
 from apscheduler.schedulers.background import BackgroundScheduler
+from dotenv import load_dotenv
 from telebot import types
 
-TOKEN = '8692232074:AAGmfRphNlsx9mtwvLvBl_Wd3onWVwn4V-o'
+# Загружает переменные из файла .env
+load_dotenv()
+
+# Читаем токен из окружения
+TOKEN = os.getenv("BOT_TOKEN")
 
 bot = telebot.TeleBot(TOKEN)
 
