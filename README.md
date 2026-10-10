@@ -27,6 +27,9 @@ Personal English teacher Telegram bot built with Python, telebot, and apschedule
 2. **Install dependencies:**
    ```bash
    pip install pyTelegramBotAPI apscheduler
-3.Run the bot:
+3. Create a .env file in the root directory and add your Telegram bot token:
+   ```bash
+   BOT_TOKEN=your_telegram_bot_token_here
+4.Run the bot:
    ```bash
    python bot.py
