@@ -24,3 +24,9 @@ Personal English teacher Telegram bot built with Python, telebot, and apschedule
    ```bash
    git clone https://github.com/ShakarovDev/ShakarovEnglishBot.git
    cd ShakarovEnglishBot
+2. **Install dependencies:**
+   ```bash
+   pip install pyTelegramBotAPI apscheduler
+3.Run the bot:
+   ```bash
+   python bot.py
