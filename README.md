@@ -22,5 +22,5 @@ Personal English teacher Telegram bot built with Python, telebot, and apschedule
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/ShakarovDev/ShakarovEnglishBot.git](https://github.com/ShakarovDev/ShakarovEnglishBot.git)
-   cd ShakarovEnglishBot
+   git clone https://github.com/ShakarovDev/ShakarovEnglishBot.git
+cd ShakarovEnglishBot
