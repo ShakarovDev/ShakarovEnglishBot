@@ -23,54 +23,59 @@ scheduler = BackgroundScheduler()       # Инициализируем фоно�
 scheduler.start()
 
 
-def send_lesson_function(chat_id):                                                          # Функция, которую будет вызывать планировщик каждый день
-    lesson_text = (            #содержание сообщение которое бот скинет как урок 
-    "Тема урока: Present simple (простое-настоящее время)\n\n"        
-    "Present Simple — простое настоящее время. Оно описывает регулярные, повторяющиеся действия, факты, постоянные состояния, а не то, что происходит прямо сейчас (для «сейчас» есть Present Continuous).\n\n"
-    "Регулярные/повторяющиеся действия (привычки, рутина):\n"
+def send_lesson_function(chat_id):
+    lesson_text = (
+        "📘 *Тема урока: Present Simple (простое настоящее время)*\n\n"
+        "Present Simple — простое настоящее время. Оно описывает регулярные, "
+        "повторяющиеся действия, факты, постоянные состояния, а не то, что "
+        "происходит прямо сейчас (для «сейчас» есть Present Continuous).\n\n"
+        "А что же тогда относится к Present Simple? Давайте разберём по пунктам.\n\n"
 
-    "I go to school every day. — Я хожу в школу каждый день.\n"
-    "She drinks coffee in the morning.\n\n"
+        "*1. Регулярные/повторяющиеся действия (привычки, рутина):*\n"
+        "I go to school every day. — Я хожу в школу каждый день.\n"
+        "She drinks coffee in the morning.\n\n"
 
-"1.Факты, общеизвестные истины:\n"
+        "*2. Факты, общеизвестные истины:*\n"
+        "The Earth goes around the Sun.\n"
+        "Water boils at 100°C.\n\n"
 
-    "The Earth goes around the Sun.\n"
-    "Water boils at 100°C.\n\n"
+        "*3. Постоянные состояния, чувства, мнения:*\n"
+        "I like ice cream.\n"
+        "He hates loud music.\n\n"
 
-"2.Постоянные состояния, чувства, мнения:\n"
-   " I like ice cream.\n"
-    "He hates loud music.\n\n"
+        "*4. Расписания и графики (поезда, самолёты, кино):*\n"
+        "The train leaves at 7:30.\n"
+        "The film starts at 9 p.m.\n\n"
 
-"3.Расписания и графики (поезда, самолёты, кино):\n"
+        "*5. Инструкции, указания, рецепты:*\n"
+        "You take the metro and get off at the third stop.\n\n"
 
-    "The train leaves at 7:30.\n"
+        "*6. Комментарии (спорт, действия в реальном времени — репортаж):*\n"
+        "Messi passes the ball… and scores!\n\n"
 
-    "The film starts at 9 p.m.\n\n"
+        "━━━━━━━━━━━━━━━\n"
+        "📐 *Грамматика*\n\n"
 
-"4.Инструкции, указания, рецепты:\n"
+        "*Формула утверждения:*\n"
+        "I / You / We / They + V1\n"
+        "He / She / It + V1 + s/es\n\n"
 
-    "You take the metro and get off at the third stop.\n\n"
+        "*Формула отрицания:*\n"
+        "I / You / We / They + do not (don't) + V1\n"
+        "He / She / It + does not (doesn't) + V1\n\n"
+        "*Примеры:*\n"
+        "I don't like tea.\n"
+        "She doesn't work here.\n"
+        "They don't go to the gym.\n\n"
 
-"5.Комментарии (спорт, действия в реальном времени — репортаж):\n"
-    
-    "Messi passes the ball… and scores!\n\n"
-    "Грамматика:\n\n"
-    "Формула:\n\n"
-    "I/You/We/They +V1\n"
-    "He/She/It +V1 + s/es\n\n" 
-    "Формула отрицания:\n\n"
-    "I / You / We / They + do + not (dont)+V1\n"
-    "He/She/It + does not (doesnt)+V1\n"
-    "Примеры:\n"
-    "I don't like tea.\n"
-    "She doesn't work here.\n"
-    "They don't go to the gym.\n\n"
-    "Вопрос\n"
-    "Формула: Do/Does + Subject + V1?\n"
-    "Do you speak English?\n"
-    "Does he live in London?\n"
-    "Do they like pizza?\n"
-     ) #конец содержания урока 
+        "*Вопрос:*\n"
+        "Формула: Do / Does + Subject + V1?\n\n"
+        "Do you speak English?\n"
+        "Does he live in London?\n"
+        "Do they like pizza?\n"
+    )
+
+    # отправка сообщения (пример для aiogram / telebot — подставьте свой метод)
     bot.send_message(chat_id, lesson_text, parse_mode="Markdown")
 @bot.message_handler(commands=['start'])         # Обработчик команды /start — срабатывает, когда пользователь запускает бота
 def any_message(message):                        # уже словил команду старт и отвечает на неё
