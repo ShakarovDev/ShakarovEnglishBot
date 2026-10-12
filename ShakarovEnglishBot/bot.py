@@ -20,12 +20,58 @@ bot = telebot.TeleBot(TOKEN)      # Инициализируем бота с п�
 bot.remove_webhook()              # Сбрасывает возможные конфликты вебхука
 
 scheduler = BackgroundScheduler()       # Инициализируем фоновый планировщик задач (APScheduler) для отправки уроков по расписанию
-scheduler.start()                       # начинает работать
+scheduler.start()
 
 
 def send_lesson_function(chat_id):                                                          # Функция, которую будет вызывать планировщик каждый день
-    bot.send_message(chat_id, "here is your lesson for today! Let's learn some English!")   #одно действие что сверху , но там по уникальному айди чела которому отправляется всё
+    lesson_text = (            #содержание сообщение которое бот скинет как урок 
+    "Тема урока: Present simple (простое-настоящее время)\n\n"        
+    "Present Simple — простое настоящее время. Оно описывает регулярные, повторяющиеся действия, факты, постоянные состояния, а не то, что происходит прямо сейчас (для «сейчас» есть Present Continuous).\n\n"
+    "Регулярные/повторяющиеся действия (привычки, рутина):\n"
 
+    "I go to school every day. — Я хожу в школу каждый день.\n"
+    "She drinks coffee in the morning.\n\n"
+
+"1.Факты, общеизвестные истины:\n"
+
+    "The Earth goes around the Sun.\n"
+    "Water boils at 100°C.\n\n"
+
+"2.Постоянные состояния, чувства, мнения:\n"
+   " I like ice cream.\n"
+    "He hates loud music.\n\n"
+
+"3.Расписания и графики (поезда, самолёты, кино):\n"
+
+    "The train leaves at 7:30.\n"
+
+    "The film starts at 9 p.m.\n\n"
+
+"4.Инструкции, указания, рецепты:\n"
+
+    "You take the metro and get off at the third stop.\n\n"
+
+"5.Комментарии (спорт, действия в реальном времени — репортаж):\n"
+    
+    "Messi passes the ball… and scores!\n\n"
+    "Грамматика:\n\n"
+    "Формула:\n\n"
+    "I/You/We/They +V1\n"
+    "He/She/It +V1 + s/es\n\n" 
+    "Формула отрицания:\n\n"
+    "I / You / We / They + do + not (dont)+V1\n"
+    "He/She/It + does not (doesnt)+V1\n"
+    "Примеры:\n"
+    "I don't like tea.\n"
+    "She doesn't work here.\n"
+    "They don't go to the gym.\n\n"
+    "Вопрос\n"
+    "Формула: Do/Does + Subject + V1?\n"
+    "Do you speak English?\n"
+    "Does he live in London?\n"
+    "Do they like pizza?\n"
+     ) #конец содержания урока 
+    bot.send_message(chat_id, lesson_text, parse_mode="Markdown")
 @bot.message_handler(commands=['start'])         # Обработчик команды /start — срабатывает, когда пользователь запускает бота
 def any_message(message):                        # уже словил команду старт и отвечает на неё
     bot.reply_to(message, "Hello, I am your personal English teacher. I can help you learn English, let's get started!") # Приветствуем пользователя
