@@ -103,5 +103,49 @@ LESSONS = [
         "Are they coming?\n"
         ),
          # ─────────── УРОК 3 ───────────
-         
+         (
+    "📘 *Тема урока: Future Simple (простое будущее время)*\n\n"
+    "Future Simple — простое будущее время. Оно описывает действия, "
+    "которые произойдут в будущем, а также спонтанные решения, "
+    "обещания, предсказания и предложения.\n\n"
+
+    "*1. Спонтанные решения (принятые в момент речи):*\n"
+    "I will help you. — Я помогу тебе.\n"
+    "It's cold. I will close the window.\n\n"
+
+    "*2. Обещания:*\n"
+    "I will call you tomorrow.\n"
+    "She will always love you.\n\n"
+
+    "*3. Предсказания и предположения:*\n"
+    "It will rain tomorrow.\n"
+    "I think he will pass the exam.\n\n"
+
+    "*4. Предложения и просьбы (с Shall / Will):*\n"
+    "Shall I open the window?\n"
+    "Will you help me, please?\n\n"
+
+    "━━━━━━━━━━━━━━━\n"
+    "📐 *Грамматика*\n\n"
+
+    "*Формула утверждения:*\n"
+    "I / You / He / She / It / We / They + will (I'll) + V\n\n"
+    "*Примеры:*\n"
+    "I will work.\n"
+    "She will sleep.\n"
+    "They will play football.\n\n"
+
+    "*Формула отрицания:*\n"
+    "I / You / He / She / It / We / They + will not (won't) + V\n\n"
+    "*Примеры:*\n"
+    "I will not (won't) work tomorrow.\n"
+    "She will not (won't) sleep early.\n"
+    "They will not (won't) play tennis.\n\n"
+
+    "*Вопрос:*\n"
+    "Формула: Will + Subject + V?\n\n"
+    "Will I do it right?\n"
+    "Will he work tomorrow?\n"
+    "Will they come?\n"
+         )
 ]
