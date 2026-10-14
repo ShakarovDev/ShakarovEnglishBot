@@ -15,7 +15,7 @@ from lessons import LESSONS        # ← НОВОЕ: импортируем сп
 
 load_dotenv()                      # Загружает переменные из файла .env
 
-TOKEN = os.getenv("BOT_TOKEN")      # Читаем токен из окружения
+TOKEN = os.getenv("BOT_TOKEN")      #  # берёт токен из .env
 
 bot = telebot.TeleBot(TOKEN)      # Инициализируем бота с помощью полученного токена
 
